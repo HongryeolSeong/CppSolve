@@ -39,7 +39,7 @@
 <br>
 
 ## 음양 더하기
-[음양 더하기👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0607_3_%EC%9D%8C%EC%96%91%EB%8D%94%ED%95%98%EA%B8%B0.cpp "음양더하기")
+[음양 더하기👉](https://programmers.co.kr/learn/courses/30/lessons/76501 "음양더하기")
 <br>
 [음양 더하기 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0607_3_%EC%9D%8C%EC%96%91%EB%8D%94%ED%95%98%EA%B8%B0.cpp "음양더하기풀이")
 <br>
