@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="0607_2_두개뽑아서더하기.cpp">
+    <ClCompile Include="0609_방문길이.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
