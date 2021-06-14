@@ -59,5 +59,5 @@
 ## 큰수 만들기
 [큰수 만들기👉](https://programmers.co.kr/learn/courses/30/lessons/42883 "큰수 만들기")
 <br>
-[큰수 만들기 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0611_%EC%98%AC%EB%B0%94%EB%A5%B8%EA%B4%84%ED%98%B8.cpp "큰수 만들기 풀이")
+[큰수 만들기 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0614_%ED%81%B0%EC%88%98%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp "큰수 만들기 풀이")
 <br>
