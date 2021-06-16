@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    int n = 15;         // 기준 정수
+    int n = 0;         // 기준 정수
     int cn = n;         // n 임시 저장용 변수
     vector<int> bn1;    // n의 2진수 벡터
     vector<int> bn2;    // n 다음 값들의 2진수 벡터
@@ -59,6 +59,8 @@ int main()
         if (cnt == cnt2) break;                 // bn1 1의 갯수와 bn2 1의 갯수가 같을경우
                                                 // 반복문 탈출 및 원하는 n값을 얻게된다.
     }
+
+    cout << n;
 
     return 0;
 }
