@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    string n = "011";  // 테스트할 스트링
+    string n = "1234";  // 테스트할 스트링
     string t;           // n에서 발생하는 순열을 잠시 담을 임시 스트링
     vector<int> all;    // n에서 발생하는 모든 순열을 정수화 하여 담을 벡터
     vector<int> final;  // all에서 중복요소를 제거한 벡터
