@@ -56,8 +56,20 @@
 [올바른 괄호 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0611_%EC%98%AC%EB%B0%94%EB%A5%B8%EA%B4%84%ED%98%B8.cpp "올바른 괄호 풀이")
 <br>
 
-## 큰수 만들기
-[큰수 만들기👉](https://programmers.co.kr/learn/courses/30/lessons/42883 "큰수 만들기")
+## 큰 수 만들기
+[큰 수 만들기👉](https://programmers.co.kr/learn/courses/30/lessons/42883 "큰수 만들기")
 <br>
-[큰수 만들기 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0614_%ED%81%B0%EC%88%98%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp "큰수 만들기 풀이")
+[큰 수 만들기 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0614_%ED%81%B0%EC%88%98%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp "큰수 만들기 풀이")
+<br>
+
+## 다음 큰 숫자
+[다음 큰 숫자👉](https://programmers.co.kr/learn/courses/30/lessons/12911 "다음 큰 숫자")
+<br>
+[다음 큰 숫자 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0616_%EB%8B%A4%EC%9D%8C%ED%81%B0%EC%88%AB%EC%9E%90.cpp "다음 큰 숫자 풀이")
+<br>
+
+## 소수 찾기
+[소수 찾기👉](https://programmers.co.kr/learn/courses/30/lessons/42839 "소수 찾기")
+<br>
+[소수 찾기 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0618_%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0.cpp "소수 찾기 풀이")
 <br>
