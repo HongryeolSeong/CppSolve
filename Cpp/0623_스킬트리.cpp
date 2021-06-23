@@ -20,7 +20,7 @@ int main()
         if ()
     }
 
-    //ㅊ방식
+    //ㅊ방식ㅎ
     /*for (int i = 0; i < skill_trees.size(); i++)
     {
         for (int j = 0; j < skill_trees[i].size(); j++)
