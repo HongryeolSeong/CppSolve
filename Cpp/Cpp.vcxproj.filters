@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="0618_소수찾기.cpp">
+    <ClCompile Include="0623_스킬트리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
