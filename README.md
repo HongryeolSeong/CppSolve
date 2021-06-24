@@ -73,3 +73,9 @@
 <br>
 [소수 찾기 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0618_%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0.cpp "소수 찾기 풀이")
 <br>
+
+## 스킬 트리
+[스킬 트리👉](https://programmers.co.kr/learn/courses/30/lessons/49993#fnref1 "스킬 트리")
+<br>
+[스킬 트리 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0623_%EC%8A%A4%ED%82%AC%ED%8A%B8%EB%A6%AC.cpp "스킬 트리 풀이")
+<br>
