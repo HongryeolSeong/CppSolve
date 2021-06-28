@@ -6,24 +6,37 @@ using namespace std;
 
 int main()
 {
-    int bridge_length = 2;
-    int weight = 10;
-    vector<int> truck_weights = { 7, 4, 5, 6 };
+    int bridge_length = 5;
+    int weight = 5;
+    vector<int> truck_weights = { 2, 2, 2, 2, 1, 1, 1, 1, 1 };
     vector<int> on;
     vector<int> out;
     vector<int> time;
-    int idx = 0;
+    int sz = truck_weights.size();
     int sum = 0;
     int cnt = 1;
 
     while (1)
     {
-        if (truck_weights.size() > 0)
+        if (time.size() > 0 && time[0] == bridge_length)
         {
-            sum += truck_weights[idx];
+            out.push_back(on[0]);
+            on.erase(on.begin());
+            time.erase(time.begin());
         }
 
-        if (sum <= weight)
+        sum = 0;
+        for (int i = 0; i < on.size(); i++)
+        {
+            sum += on[i];
+        }
+
+        if (truck_weights.size() > 0)
+        {
+            sum += truck_weights[0];
+        }
+
+        if (sum <= weight && on.size() < bridge_length)
         {
             if (truck_weights.size() > 0)
             {
@@ -39,21 +52,13 @@ int main()
         }
         else
         {
-            sum = 0;
             for (int i = 0; i < time.size(); i++)
             {
                 time[i]++;
             }
         }
 
-        if (time[0] == bridge_length + 1)
-        {
-            out.push_back(on[0]);
-            on.erase(on.begin());
-            time.erase(time.begin());
-        }
-
-        if (on.size() == 0) break;
+        if (out.size() == sz) break;
 
         cnt++;
     }
