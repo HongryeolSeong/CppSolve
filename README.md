@@ -79,3 +79,21 @@
 <br>
 [스킬 트리 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0623_%EC%8A%A4%ED%82%AC%ED%8A%B8%EB%A6%AC.cpp "스킬 트리 풀이")
 <br>
+
+## 점프와 순간 이동
+[점프와 순간 이동👉](https://programmers.co.kr/learn/courses/30/lessons/12980 "점프와 순간 이동")
+<br>
+[점프와 순간 이동 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0625_%EC%A0%90%ED%94%84%EC%99%80%EC%88%9C%EA%B0%84%EC%9D%B4%EB%8F%99.cpp "점프와 순간 이동 풀이")
+<br>
+
+## 영어 끝말잇기
+[영어 끝말잇기👉](https://programmers.co.kr/learn/courses/30/lessons/12981 "영어 끝말잇기")
+<br>
+[영어 끝말잇기 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0625_%EC%98%81%EC%96%B4%EB%81%9D%EB%A7%90%EC%9E%87%EA%B8%B0.cpp "영어 끝말잇기 풀이")
+<br>
+
+## 다리를 지나는 트럭
+[다리를 지나는 트럭👉](https://programmers.co.kr/learn/courses/30/lessons/42583 "다리를 지나는 트럭")
+<br>
+[다리를 지나는 트럭 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0628_%EB%8B%A4%EB%A6%AC%EB%A5%BC%EC%A7%80%EB%82%98%EB%8A%94%ED%8A%B8%EB%9F%AD.cpp "다리를 지나는 트럭 풀이")
+<br>
