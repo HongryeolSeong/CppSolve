@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	long A, B, C;
+	long A, B, C;			// A(
 	long long ans;
 
 	cin >> A >> B >> C;
