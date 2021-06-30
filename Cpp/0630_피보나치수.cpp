@@ -6,7 +6,7 @@ using namespace std;
 
 int makeFibo(int n);
 
-int main()
+int main() // ¤¾¤¾
 {
     int n = 3;
     int fn;
