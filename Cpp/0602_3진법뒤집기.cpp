@@ -5,24 +5,24 @@
 using namespace std;
 
 int solution(int n) {
-	int ary[1000];		// nÀÇ 3Áø¼ö¸¦ ´ãÀ» ¹è¿­
-	int index = 0;		// aryÀÇ ¸¶Áö¸· ÀÎµ¦½º(3Áø¼ö ÃÑ ÀÚ¸®¼ö)
-	int res = 0;		// ÃÖÁ¾ ¹ÝÈ¯ º¯¼ö
+	int ary[1000];		// nì˜ 3ì§„ìˆ˜ë¥¼ ë‹´ì„ ë°°ì—´
+	int index = 0;		// aryì˜ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤(3ì§„ìˆ˜ ì´ ìžë¦¬ìˆ˜)
+	int res = 0;		// ìµœì¢… ë°˜í™˜ ë³€ìˆ˜
 	int i;
 
-	// 1. nÀ» 3Áø¼ö·Î º¯È¯. n -> ary
+	// 1. nì„ 3ì§„ìˆ˜ë¡œ ë³€í™˜. n -> ary
 	while (1)
 	{
-		ary[index] = n % 3;	// ary[0]À» ½ÃÀÛÀ¸·Î 3Áø¼ö Ã¹ ÀÚ¸®ºÎÅÍ ´ëÀÔ ½ÃÀÛ
-		n /= 3;				// ´ÙÀ½ ÇÇÁ¦¼ö
-		if (n == 0) break;	// ÇÇÁ¦¼ö°¡ 0ÀÌ¸é(3Áø¼ö º¯È¯ ¿Ï·á) ¹Ýº¹¹® Å»Ãâ
-		index++;			// 3Áø¼ö º¯È¯¸¶´Ù +1
+		ary[index] = n % 3;	// ary[0]ì„ ì‹œìž‘ìœ¼ë¡œ 3ì§„ìˆ˜ ì²« ìžë¦¬ë¶€í„° ëŒ€ìž… ì‹œìž‘
+		n /= 3;			// ë‹¤ìŒ í”¼ì œìˆ˜
+		if (n == 0) break;	// í”¼ì œìˆ˜ê°€ 0ì´ë©´(3ì§„ìˆ˜ ë³€í™˜ ì™„ë£Œ) ë°˜ë³µë¬¸ íƒˆì¶œ
+		index++;		// 3ì§„ìˆ˜ ë³€í™˜ë§ˆë‹¤ +1
 	}
 
-	// 2. n(3)À» ¾Õ µÚ ¹ÝÀü. ary ¾Õ µÚ ¹ÝÀü
-	int temp;		// swapÀ» À§ÇÑ ÀÓ½Ã º¯¼ö
-	int j = index;	// aryÀÇ ¸¶Áö¸· ÀÎµ¦½º
-	for (i = 0; i <= index / 2; i++)	// ¾ÕµÚ ¹ÝÀüÀ» À§ÇØ Ã³À½ºÎÅÍ ¹è¿­ÀÇ Áß°£±îÁö ¼öÇà
+	// 2. n(3)ì„ ì•ž ë’¤ ë°˜ì „. ary ì•ž ë’¤ ë°˜ì „
+	int temp;				// swapì„ ìœ„í•œ ìž„ì‹œ ë³€ìˆ˜
+	int j = index;				// aryì˜ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤
+	for (i = 0; i <= index / 2; i++)	// ì•žë’¤ ë°˜ì „ì„ ìœ„í•´ ì²˜ìŒë¶€í„° ë°°ì—´ì˜ ì¤‘ê°„ê¹Œì§€ ìˆ˜í–‰
 	{
 		//swap
 		temp = ary[i];
@@ -31,12 +31,12 @@ int solution(int n) {
 		j--;
 	}
 	
-	// 3. ¹ÝÀüÇÑ n(3)À» 10Áø¼ö·Î º¯È¯. ary -> res
-	int three = 1;					// 3Áø¼ö º¯È¯À» 3ÀÇ °ÅµìÁ¦°öÀ» ´ãÀ» º¯¼ö
+	// 3. ë°˜ì „í•œ n(3)ì„ 10ì§„ìˆ˜ë¡œ ë³€í™˜. ary -> res
+	int three = 1;					// 3ì§„ìˆ˜ ë³€í™˜ì„ 3ì˜ ê±°ë“­ì œê³±ì„ ë‹´ì„ ë³€ìˆ˜
 	for (i = 0; i <= index; i++)
 	{
-		res += ary[i] * three;		// 3Áø¼ö º¯È¯
-		three *= 3;					// ´ÙÀ½ °ÅµìÁ¦°ö ¸¸µé±â
+		res += ary[i] * three;			// 3ì§„ìˆ˜ ë³€í™˜
+		three *= 3;				// ë‹¤ìŒ ê±°ë“­ì œê³± ë§Œë“¤ê¸°
 	}
 	
 	return res;
