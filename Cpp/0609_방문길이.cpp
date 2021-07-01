@@ -4,30 +4,30 @@ using namespace std;
 
 int main()
 {
-    string dirs = "LLLLLLR";    // ¹æ¹®ÀÚÀÇ °æ·Î¸¦ ´ãÀº ¹®ÀÚ¿­
-    int mx[600] = { 0 };        // ¹æ¹®ÀÚÀÇ x°æ·Î¸¦ ´ãÀ» Á¤¼ö ¹è¿­(Àü ¿ä¼Ò 0À¸·Î ÃÊ±âÈ­)
-    int my[600] = { 0 };        // ¹æ¹®ÀÚÀÇ y°æ·Î¸¦ ´ãÀ» Á¤¼ö ¹è¿­(Àü ¿ä¼Ò 0À¸·Î ÃÊ±âÈ­)
-    int cntx = 0;               // mxÀÇ »çÀÌÁî
-    int cnty = 0;               // myÀÇ »çÀÌÁî
-    int ix = 0;                 // mxÀÇ ÀÎµ¦½º
-    int iy = 0;                 // myÀÇ ÀÎµ¦½º
-    int ry, rx;                 // ÁÂÇ¥¸¦ ÅëÇØ ±¸ÇÑ °æ·Î °ª
-    int res1 = 0;               // Áßº¹µÈ °æ·Î °ªÀ» Á¦¿ÜÇÑ mxÀÇ »çÀÌÁî(= ÃÖÁ¾ x¹æÇâ °æ·Î ¼ö)
-    int res2 = 0;               // Áßº¹µÈ °æ·Î °ªÀ» Á¦¿ÜÇÑ myÀÇ »çÀÌÁî(= ÃÖÁ¾ y¹æÇâ °æ·Î ¼ö)
+    string dirs = "LLLLLLR";    // ë°©ë¬¸ìžì˜ ê²½ë¡œë¥¼ ë‹´ì€ ë¬¸ìžì—´
+    int mx[600] = { 0 };        // ë°©ë¬¸ìžì˜ xê²½ë¡œë¥¼ ë‹´ì„ ì •ìˆ˜ ë°°ì—´(ì „ ìš”ì†Œ 0ìœ¼ë¡œ ì´ˆê¸°í™”)
+    int my[600] = { 0 };        // ë°©ë¬¸ìžì˜ yê²½ë¡œë¥¼ ë‹´ì„ ì •ìˆ˜ ë°°ì—´(ì „ ìš”ì†Œ 0ìœ¼ë¡œ ì´ˆê¸°í™”)
+    int cntx = 0;               // mxì˜ ì‚¬ì´ì¦ˆ
+    int cnty = 0;               // myì˜ ì‚¬ì´ì¦ˆ
+    int ix = 0;                 // mxì˜ ì¸ë±ìŠ¤
+    int iy = 0;                 // myì˜ ì¸ë±ìŠ¤
+    int ry, rx;                 // ì¢Œí‘œë¥¼ í†µí•´ êµ¬í•œ ê²½ë¡œ ê°’
+    int res1 = 0;               // ì¤‘ë³µëœ ê²½ë¡œ ê°’ì„ ì œì™¸í•œ mxì˜ ì‚¬ì´ì¦ˆ(= ìµœì¢… xë°©í–¥ ê²½ë¡œ ìˆ˜)
+    int res2 = 0;               // ì¤‘ë³µëœ ê²½ë¡œ ê°’ì„ ì œì™¸í•œ myì˜ ì‚¬ì´ì¦ˆ(= ìµœì¢… yë°©í–¥ ê²½ë¡œ ìˆ˜)
     int res;                    // res1 + res2
-    //int a[11][11] = { 0 };    // ÇÏ´Ùº¸´Ï ÁÂÇ¥ ÂïÀ» ÇÊ¿ä´Â ¾øÀ» µí
-    int x = 5;                  // Ã³À½ xÁÂÇ¥
-    int y = 5;                  // Ã³À½ yÁÂÇ¥
+    //int a[11][11] = { 0 };    // í•˜ë‹¤ë³´ë‹ˆ ì¢Œí‘œ ì°ì„ í•„ìš”ëŠ” ì—†ì„ ë“¯
+    int x = 5;                  // ì²˜ìŒ xì¢Œí‘œ
+    int y = 5;                  // ì²˜ìŒ yì¢Œí‘œ
 
 
-//                     xÃà
+//                     xì¶•
 //       0  1  2  3  4  5  6  7  8  9  10
 //     0
 //     1
-//     2            (y, x)·Î °¡Á¤ÇÏ°í Çß½À´Ï´Ù. 
-//     3            ¿ø·¡´Â (x, y)ÀÌÁö¸¸ ÇÏ´Ùº¸´Ï±î ÀÌ·¸°Ô ÇØ¹ö¸²
+//     2            â€» (y, x)ë¡œ ê°€ì •í•˜ê³  í–ˆìŠµë‹ˆë‹¤. 
+//     3               ì›ëž˜ëŠ” (x, y)ì´ì§€ë§Œ í•˜ë‹¤ë³´ë‹ˆê¹Œ ì´ë ‡ê²Œ í•´ë²„ë¦¼
 //     4
-// yÃà 5             (5, 5) -> ¿øÁ¡
+// yì¶• 5             (5, 5) -> ì›ì 
 //     6
 //     7
 //     8
@@ -35,24 +35,24 @@ int main()
 //     10
 
 
-    // 1. dirsÀ» ÀÐ¾î ¹æÇâ¿¡ µû¸¥ °æ·Î °ª ±¸ÇÑ´Ù
+    // 1. dirsì„ ì½ì–´ ë°©í–¥ì— ë”°ë¥¸ ê²½ë¡œ ê°’ êµ¬í•œë‹¤
     for (int i = 0; i < dirs.size(); i++)
     {
         if (dirs[i] == 'U') // up
         {
-            y--;            // À§·Î ÇÑ Ä­ ¿Ã¶ó°¡¹Ç·Î y--
+            y--;            // ìœ„ë¡œ í•œ ì¹¸ ì˜¬ë¼ê°€ë¯€ë¡œ y--
 
-            if (y < 0)      // U¿¡ ÀÇÇÑ ´ÙÀ½ ÁÂÇ¥°¡ Æò¸é ¹ÛÀÎ °æ¿ì
+            if (y < 0)      // Uì— ì˜í•œ ë‹¤ìŒ ì¢Œí‘œê°€ í‰ë©´ ë°–ì¸ ê²½ìš°
             {
-                y = 0;      // U¸¦ Á¦¿ÜÇÑ ´Ù¸¥ ¹æÇâÀ¸·Î °¡±âÀ§ÇØ 0À¸·Î ÃÊ±âÈ­
+                y = 0;      // Uë¥¼ ì œì™¸í•œ ë‹¤ë¥¸ ë°©í–¥ìœ¼ë¡œ ê°€ê¸°ìœ„í•´ 0ìœ¼ë¡œ ì´ˆê¸°í™”
                 continue;
             }
 
-            ry = (y + (y + 1)) + (x * 100); // °æ·Î¹è¿­¿¡ ³ÖÀ» °æ·Î °ª °è»ê
-                                            // (5, 5) -> (4, 5)ÀÎ °æ¿ì
-                                            // ry = 509°¡ µÈ´Ù.
-            cnty++;                         // °æ·Î ¹è¿­ÀÇ »çÀÌÁî ÃøÁ¤
-            my[iy++] = ry;                  // °æ·Î ¹è¿­¿¡ »ðÀÔ
+            ry = (y + (y + 1)) + (x * 100); // ê²½ë¡œë°°ì—´ì— ë„£ì„ ê²½ë¡œ ê°’ ê³„ì‚°
+                                            // (5, 5) -> (4, 5)ì¸ ê²½ìš°
+                                            // ry = 509ê°€ ëœë‹¤.
+            cnty++;                         // ê²½ë¡œ ë°°ì—´ì˜ ì‚¬ì´ì¦ˆ ì¸¡ì •
+            my[iy++] = ry;                  // ê²½ë¡œ ë°°ì—´ì— ì‚½ìž…
         }
         else if (dirs[i] == 'D') // down
         {
@@ -92,20 +92,20 @@ int main()
         }
     }
 
-    // 2. ¹æ¹®ÀÌ ³¡³ª°í °¢ °æ·Î ¹è¿­¿¡¼­ Áßº¹µÇ´Â °æ·Î¿¡ ´ëÇÑ Ã³¸®
-    for (int i = 0; i < cntx; i++)      // mx¹è¿­ Ã³¸®
+    // 2. ë°©ë¬¸ì´ ëë‚˜ê³  ê° ê²½ë¡œ ë°°ì—´ì—ì„œ ì¤‘ë³µë˜ëŠ” ê²½ë¡œì— ëŒ€í•œ ì²˜ë¦¬
+    for (int i = 0; i < cntx; i++)      // mxë°°ì—´ ì²˜ë¦¬
     {
         for (int j = 0; j < cntx; j++)
         {
             if (i == j) continue;
-            if (mx[i] == mx[j])         // Áßº¹µÇ´Â ÇÑ ½ÖÀÇ °ª ¹ß°ß½Ã
+            if (mx[i] == mx[j])         // ì¤‘ë³µë˜ëŠ” í•œ ìŒì˜ ê°’ ë°œê²¬ì‹œ
             {
-                mx[j] = -1;             // µÑ Áß ÇÏ³ª¸¦ -1·Î Ã³¸®
+                mx[j] = -1;             // ë‘˜ ì¤‘ í•˜ë‚˜ë¥¼ -1ë¡œ ì²˜ë¦¬
             }
         }
     }
 
-    for (int i = 0; i < cnty; i++)      // my¹è¿­ Ã³¸®
+    for (int i = 0; i < cnty; i++)      // myë°°ì—´ ì²˜ë¦¬
     {
         for (int j = 0; j < cnty; j++)
         {
@@ -117,11 +117,11 @@ int main()
         }
     }
 
-    // 3. ÃÖÁ¾À¸·Î Ã³À½ °ÉÀº ±æÀÇ ±æÀÌ¸¦ ±¸ÇÑ´Ù
+    // 3. ìµœì¢…ìœ¼ë¡œ ì²˜ìŒ ê±¸ì€ ê¸¸ì˜ ê¸¸ì´ë¥¼ êµ¬í•œë‹¤
     for (int i = 0; i < cntx; i++)
     {
-        if (mx[i] == -1) continue;  // 2´Ü°è¿¡¼­ Ã³¸®ÇÑ Áßº¹ °ªÀ» »©°í
-        res1++;                     // Ä«¿îÆ® ÇÑ´Ù
+        if (mx[i] == -1) continue;  // 2ë‹¨ê³„ì—ì„œ ì²˜ë¦¬í•œ ì¤‘ë³µ ê°’ì„ ë¹¼ê³ 
+        res1++;                     // ì¹´ìš´íŠ¸ í•œë‹¤
     }
 
     for (int i = 0; i < cnty; i++)
@@ -130,7 +130,7 @@ int main()
         res2++;
     }
 
-    res = res1 + res2;              // Ä«¿îµåµÈ x°æ·Î¼ö¿Í y°æ·Î ¼ö¸¦ ´õÇÏ¿© ÃÖÁ¾°ª °è»ê
+    res = res1 + res2;              // ì¹´ìš´ë“œëœ xê²½ë¡œìˆ˜ì™€ yê²½ë¡œ ìˆ˜ë¥¼ ë”í•˜ì—¬ ìµœì¢…ê°’ ê³„ì‚°
 
     cout << res;
 
