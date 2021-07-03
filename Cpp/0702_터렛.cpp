@@ -7,35 +7,35 @@ using namespace std;
 
 int main()
 {
-	int T;					// Å×½ºÆ® ÄÉÀÌ½º ¼ö
-	vector<int> vx1;		// ÁÂÇ¥1ÀÇ xÁÂÇ¥
-	vector<int> vy1;		// ÁÂÇ¥1ÀÇ yÁÂÇ¥
-	vector<int> vr1;		// ÁÂÇ¥1ÀÇ Å¸°Ù°ú °Å¸®
-	vector<int> vx2;		// ÁÂÇ¥2ÀÇ xÁÂÇ¥
-	vector<int> vy2;		// ÁÂÇ¥2ÀÇ yÁÂÇ¥
-	vector<int> vr2;		// ÁÂÇ¥2ÀÇ Å¸ÄÏ°ú °Å¸®
+	int T;				// í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ìˆ˜
+	vector<int> vx1;		// ì¢Œí‘œ1ì˜ xì¢Œí‘œ
+	vector<int> vy1;		// ì¢Œí‘œ1ì˜ yì¢Œí‘œ
+	vector<int> vr1;		// ì¢Œí‘œ1ì˜ íƒ€ê²Ÿê³¼ ê±°ë¦¬
+	vector<int> vx2;		// ì¢Œí‘œ2ì˜ xì¢Œí‘œ
+	vector<int> vy2;		// ì¢Œí‘œ2ì˜ yì¢Œí‘œ
+	vector<int> vr2;		// ì¢Œí‘œ2ì˜ íƒ€ì¼“ê³¼ ê±°ë¦¬
 
-	int x1;					// »ç¿ëÀÚ ÀÔ·Â ¹ÞÀ» º¯¼öµé
+	int x1;				// ì‚¬ìš©ìž ìž…ë ¥ ë°›ì„ ë³€ìˆ˜ë“¤
 	int y1;
 	int r1;
 	int x2;
 	int y2;
-	int r2;					// ¿ä±â±îÁö
+	int r2;				// ìš”ê¸°ê¹Œì§€
 
-	int idx = 0;			// ¹Ýº¹¹®¿¡ »ç¿ëµÉ º¤ÅÍ ÀÎµ¦½º
-	vector<int> vcnt;		// ÃÖÁ¾ ¹ÝÈ¯ÇÒ Å¸°Ù ÁÂÇ¥ ¼ö
+	int idx = 0;			// ë°˜ë³µë¬¸ì— ì‚¬ìš©ë  ë²¡í„° ì¸ë±ìŠ¤
+	vector<int> vcnt;		// ìµœì¢… ë°˜í™˜í•  íƒ€ê²Ÿ ì¢Œí‘œ ìˆ˜
 
 
-	// Å¸°Ù ÁÂÇ¥´Â
-	// ¿øÁ¡:ÁÂÇ¥1, ¹ÝÁö¸§:r1ÀÎ ¿ø1°ú -> ÁÂÇ¥1¿¡¼­ Á¸Àç°¡´ÉÇÑ Å¸°ÙÀÇ ÁýÇÕ
-	// ¿øÁ¡:ÁÂÇ¥2, ¹ÝÁö¸§:r2ÀÎ ¿ø2¸¦ -> ÁÂÇ¥2¿¡¼­ Á¸Àç°¡´ÉÇÑ Å¸°ÙÀÇ ÁýÇÕ
-	// °¡Á¤ÇÏ¿© °ãÄ¡´Â °æ¿ì¸¦ Ã£¾Æ ±× °¹¼ö¸¦ ±¸ÇÑ´Ù.
+	// íƒ€ê²Ÿ ì¢Œí‘œëŠ”
+	// ì›ì :ì¢Œí‘œ1, ë°˜ì§€ë¦„:r1ì¸ ì›1ê³¼ -> ì¢Œí‘œ1ì—ì„œ ì¡´ìž¬ê°€ëŠ¥í•œ íƒ€ê²Ÿì˜ ì§‘í•©
+	// ì›ì :ì¢Œí‘œ2, ë°˜ì§€ë¦„:r2ì¸ ì›2ë¥¼ -> ì¢Œí‘œ2ì—ì„œ ì¡´ìž¬ê°€ëŠ¥í•œ íƒ€ê²Ÿì˜ ì§‘í•©
+	// ê°€ì •í•˜ì—¬ ê²¹ì¹˜ëŠ” ê²½ìš°ë¥¼ ì°¾ì•„ ê·¸ ê°¯ìˆ˜ë¥¼ êµ¬í•œë‹¤.
 
-	// 1. Å×½ºÆ®ÇÒ ÄÉÀÌ½ºÀÇ ¼ö¸¦ ÀÔ·Â¹Þ´Â´Ù.
+	// 1. í…ŒìŠ¤íŠ¸í•  ì¼€ì´ìŠ¤ì˜ ìˆ˜ë¥¼ ìž…ë ¥ë°›ëŠ”ë‹¤.
 	cin >> T;
 	
-	// 2. T¸¸Å­ ÄÉÀÌ½º º° µ¥ÀÌÅÍ¸¦ ÀÔ·Â¹Þ´Â´Ù.
-	//    µ¥ÀÌÅÍ´Â ¹Ù·Î ÇØ´ç º¤ÅÍ¿¡ µé¾î°£´Ù.
+	// 2. Të§Œí¼ ì¼€ì´ìŠ¤ ë³„ ë°ì´í„°ë¥¼ ìž…ë ¥ë°›ëŠ”ë‹¤.
+	//    ë°ì´í„°ëŠ” ë°”ë¡œ í•´ë‹¹ ë²¡í„°ì— ë“¤ì–´ê°„ë‹¤.
 	for (int i = 0; i < T; i++)
 	{
 		cin >> x1 >> y1 >> r1 >> x2 >> y2 >> r2;
@@ -47,41 +47,41 @@ int main()
 		vr2.push_back(r2);
 	}
 
-	// 3. ¿Ï¼ºµÈ º¤ÅÍµé·Î Å¸°Ù ÁÂÇ¥µéÀÇ ¼ö¸¦ ±¸ÇÑ´Ù.
+	// 3. ì™„ì„±ëœ ë²¡í„°ë“¤ë¡œ íƒ€ê²Ÿ ì¢Œí‘œë“¤ì˜ ìˆ˜ë¥¼ êµ¬í•œë‹¤.
 	while (1)
 	{
-		// 3-1. ÁÂÇ¥1°ú ÁÂÇ¥2ÀÇ µ¥ÀÌÅÍ°¡ ¸ðµÎ °°Àº °æ¿ì
-		//      Å¸°Ù ÁÂÇ¥ ¼ö´Â ¹«ÇÑ´ë ÀÌ¹Ç·Î cnt´Â -1ÀÌ µÈ´Ù.
+		// 3-1. ì¢Œí‘œ1ê³¼ ì¢Œí‘œ2ì˜ ë°ì´í„°ê°€ ëª¨ë‘ ê°™ì€ ê²½ìš°
+		//      íƒ€ê²Ÿ ì¢Œí‘œ ìˆ˜ëŠ” ë¬´í•œëŒ€ ì´ë¯€ë¡œ cntëŠ” -1ì´ ëœë‹¤.
 		if (vx1[idx] == vx2[idx] && vr1[idx] == vr2[idx] && vy1[idx] == vy2[idx])
 		{
 			vcnt.push_back(-1);
 		}
 		else 
 		{
-			// 3-2. µÎ ¿øÀÇ ¿øÁ¡°£ °Å¸®¿Í
-			//      µÎ ¹ÝÁö¸§À» ´õÇÑ °Å¸®°¡ °°Àº °æ¿ì(¿ÜÁ¢) ÀÌ°Å³ª
-			//      µÎ ¹ÝÁö¸§À» »« °Å¸®°¡ °°Àº °æ¿ì(³»Á¢) ÀÌ¸é ÁÂÇ¥ ¼ö´Â 1°³.
+			// 3-2. ë‘ ì›ì˜ ì›ì ê°„ ê±°ë¦¬ì™€
+			//      ë‘ ë°˜ì§€ë¦„ì„ ë”í•œ ê±°ë¦¬ê°€ ê°™ì€ ê²½ìš°(ì™¸ì ‘) ì´ê±°ë‚˜
+			//      ë‘ ë°˜ì§€ë¦„ì„ ëº€ ê±°ë¦¬ê°€ ê°™ì€ ê²½ìš°(ë‚´ì ‘) ì´ë©´ ì¢Œí‘œ ìˆ˜ëŠ” 1ê°œ.
 			if (pow(vx2[idx] - vx1[idx], 2) + pow(vy2[idx] - vy1[idx], 2) == pow(vr1[idx] + vr2[idx], 2) ||
 				pow(vx2[idx] - vx1[idx], 2) + pow(vy2[idx] - vy1[idx], 2) == pow(vr1[idx] - vr2[idx], 2))
 			{
 				vcnt.push_back(1);
 			}
-			// 3-3. µÎ ¿øÀÇ ¿øÁ¡°£ °Å¸®°¡
-			//      µÎ ¹ÝÁö¸§À» ´õÇÑ °Å¸®º¸´Ù ÀÛ°í,
-			//      µÎ ¹ÝÁö¸§À» »« °Å¸®º¸´Ù Å« °æ¿ì(µÎ Á¡¿¡¼­ ¸¸³²) ÁÂÇ¥ ¼ö´Â 2°³.
+			// 3-3. ë‘ ì›ì˜ ì›ì ê°„ ê±°ë¦¬ê°€
+			//      ë‘ ë°˜ì§€ë¦„ì„ ë”í•œ ê±°ë¦¬ë³´ë‹¤ ìž‘ê³ ,
+			//      ë‘ ë°˜ì§€ë¦„ì„ ëº€ ê±°ë¦¬ë³´ë‹¤ í° ê²½ìš°(ë‘ ì ì—ì„œ ë§Œë‚¨) ì¢Œí‘œ ìˆ˜ëŠ” 2ê°œ.
 			else if (pow(vx2[idx] - vx1[idx], 2) + pow(vy2[idx] - vy1[idx], 2) < pow(vr1[idx] + vr2[idx], 2) &&
 				pow(vx2[idx] - vx1[idx], 2) + pow(vy2[idx] - vy1[idx], 2) > pow(vr1[idx] - vr2[idx], 2))
 			{
 				vcnt.push_back(2);
 			}
-			// 3-4. µÎ ¿øÀÇ ¿øÁ¡ÀÌ °°Áö¸¸ ¹ÝÁö¸§ÀÌ ´Ù¸¥°æ¿ì,
-			//      µÎ ¿øÁ¡ÀÇ ¿øÁ¡µµ ´Ù¸£°í Á¢Á¡ÀÌ ¾ø´Â°æ¿ì ÁÂÇ¥ ¼ö´Â 0°³.
+			// 3-4. ë‘ ì›ì˜ ì›ì ì´ ê°™ì§€ë§Œ ë°˜ì§€ë¦„ì´ ë‹¤ë¥¸ê²½ìš°,
+			//      ë‘ ì›ì ì˜ ì›ì ë„ ë‹¤ë¥´ê³  ì ‘ì ì´ ì—†ëŠ”ê²½ìš° ì¢Œí‘œ ìˆ˜ëŠ” 0ê°œ.
 			else
 			{
 				vcnt.push_back(0);
 			}
 
-			// È«·Ä ¹ýÄ¢ ½ÇÆÐ
+			// í™ë ¬ ë²•ì¹™ ì‹¤íŒ¨
 			/*for (int i = vx1[idx] - vr1[idx]; i <= vy1[idx] + vr1[idx]; i++)
 			{
 				for (int j = vx1[idx] - vr1[idx]; j <= vy1[idx] + vr1[idx]; j++)
@@ -99,7 +99,7 @@ int main()
 		if (idx == T) break;
 	}
 
-	// 4. 3¿¡¼­ ¸¸µç ÁÂÇ¥ ¼ö º¤ÅÍ¸¦ ÇÏ³ª¾¿ Ãâ·ÂÇÑ´Ù.
+	// 4. 3ì—ì„œ ë§Œë“  ì¢Œí‘œ ìˆ˜ ë²¡í„°ë¥¼ í•˜ë‚˜ì”© ì¶œë ¥í•œë‹¤.
 	for (int i = 0; i < vcnt.size(); i++)
 	{
 		cout << vcnt[i] << '\n';
