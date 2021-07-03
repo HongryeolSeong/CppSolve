@@ -109,3 +109,15 @@
 <br>
 [피보나치 수열 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0630_%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%EC%88%98.cpp "손익분기점 풀이")
 <br>
+
+## 네번째 점
+[네번째 점👉](https://www.acmicpc.net/problem/3009 "네번째 점")
+<br>
+[네번째 점 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0702_%EB%84%A4%EB%B2%88%EC%A7%B8%EC%A0%90.cpp "네번째 점 풀이")
+<br>
+
+## 터렛
+[터렛👉](https://www.acmicpc.net/problem/1002 "터렛")
+<br>
+[터렛 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0702_%ED%84%B0%EB%A0%9B.cpp "터렛 풀이")
+<br>
