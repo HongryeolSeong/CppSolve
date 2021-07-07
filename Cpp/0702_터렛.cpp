@@ -99,7 +99,7 @@ int main()
 		if (idx == T) break;
 	}
 
-	// 4. 3에서 만든 좌표 수 벡터를 하나씩 출력한다.
+	// 4. 3에서 만든 좌표 수 벡터를 하나씩 출력한다. 
 	for (int i = 0; i < vcnt.size(); i++)
 	{
 		cout << vcnt[i] << '\n';
