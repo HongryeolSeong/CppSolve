@@ -121,3 +121,9 @@
 <br>
 [터렛 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0702_%ED%84%B0%EB%A0%9B.cpp "터렛 풀이")
 <br>
+
+## N개의 최소공배수
+[N개의 최소공배수👉](https://programmers.co.kr/learn/courses/30/lessons/12953 "N개의 최소공배수")
+<br>
+[N개의 최소공배수 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0712_N%EA%B0%9C%EC%9D%98%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp "N개의 최소공배수 풀이")
+<br>
