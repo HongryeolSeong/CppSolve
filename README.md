@@ -127,3 +127,9 @@
 <br>
 [N개의 최소공배수 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0712_N%EA%B0%9C%EC%9D%98%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp "N개의 최소공배수 풀이")
 <br>
+
+## 124나라의 숫자
+[124나라의 숫자👉](https://programmers.co.kr/learn/courses/30/lessons/12899 "124나라의 숫자")
+<br>
+[124나라의 숫자 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0714_124%EB%82%98%EB%9D%BC%EC%9D%98%EC%88%AB%EC%9E%90.cpp "124나라의 숫자 풀이")
+<br>
