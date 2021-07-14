@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="0712_N개의최소공배수.cpp">
+    <ClCompile Include="0714_124나라의숫자.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
