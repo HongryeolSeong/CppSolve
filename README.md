@@ -133,3 +133,9 @@
 <br>
 [124나라의 숫자 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0714_124%EB%82%98%EB%9D%BC%EC%9D%98%EC%88%AB%EC%9E%90.cpp "124나라의 숫자 풀이")
 <br>
+
+## 최댓값과 최솟값
+[최댓값과 최솟값👉](https://programmers.co.kr/learn/courses/30/lessons/12939 "최댓값과 최솟값")
+<br>
+[최댓값과 최솟값 풀이👉](https://github.com/HongryeolSeong/CppSolve/blob/main/Cpp/0716_%EC%B5%9C%EB%8C%93%EA%B0%92%EA%B3%BC%20%EC%B5%9C%EC%86%9F%EA%B0%92.cpp "최댓값과 최솟값 풀이")
+<br>
